@@ -1,6 +1,7 @@
 ﻿using MasterTrainer.Business.AuthenticationManagement.Services;
 using MasterTrainer.Business.RegistrationManagement.Exceptions;
 using MasterTrainer.Business.UserManagement.Services;
+using MasterTrainer.Configuration;
 using MasterTrainer.DataContracts.UserManagement;
 
 namespace MasterTrainer.Business.RegistrationManagement.Services
@@ -18,8 +19,10 @@ namespace MasterTrainer.Business.RegistrationManagement.Services
 
         public User Register(string name, string email, string password, string confirmation)
         {
-            // TODO: Minimum length password verification
-            // TODO: Remove email
+            if (password.Length < RegistrationConfiguration.MinimumPasswordLength)
+            {
+                throw new RegistrationException($"The password should be at least {RegistrationConfiguration.MinimumPasswordLength} characters long!");
+            }
 
             if (password != confirmation)
             {
