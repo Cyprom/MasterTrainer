@@ -1,0 +1,59 @@
+﻿/* ===================================
+DEFINITIONS
+=================================== */
+// Colors
+$teal-blue:         #043b59;
+$fun-green:         #009c27;
+$monza:             #e40613;
+$yellow-sea:        #ffad00;
+$aqua-island:       #9dc4d9;
+
+// Grey variants
+$foggy-gray:        #cdc7b9;
+$dove-gray:         #676767;
+$silver:            #cccccc;
+$mercury:           #e9e9e9;
+$mercury-dark:      #333333;
+$pampas:            #f3f0ed;
+$athens-gray:       #f8f9fa;
+
+// Monotone
+$white:             #ffffff;
+$black:             #000000;
+
+/* ===================================
+BRANDING
+=================================== */
+$primary:           $teal-blue;
+$secondary:         $fun-green;
+$tertiary:          $monza;
+
+$grey1:             $pampas;
+$grey2:             $athens-gray;
+$grey3:             $dove-gray;
+$grey4:             $silver;
+$grey5:             $mercury;
+$grey6:             $mercury-dark;
+
+$valid:             $fun-green;
+$warning:           $yellow-sea;
+$invalid:           $monza;
+
+$-border-input:     $aqua-island;
+$border-dotted:     $dove-gray;
+
+/* ===================================
+MEDIA QUERIES
+=================================== */
+$bp-sm-landscape:   576px;
+$bp-md:             768px;
+$bp-lg:             992px;
+$bp-xl:             1200px;
+$bp-xxl:            1600px;
+$bp-xxxl:           1920px;
+
+
+/* ===================================
+FONTS
+=================================== */
+$fontawesome:       "Font Awesome 5 Free";
