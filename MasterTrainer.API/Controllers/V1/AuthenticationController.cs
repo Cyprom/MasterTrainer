@@ -1,14 +1,13 @@
-﻿namespace MasterTrainer.API.Controllers.V1
-{
-    using NLog;
-    using System;
-    using System.Web;
-    using System.Web.Http;
-    using System.Web.Security;
-    using MasterTrainer.DataContracts.AuthenticationManagement;
-    using MasterTrainer.Business.AuthenticationManagement.Services;
-    using MasterTrainer.Business.UserManagement.Services;
+﻿using NLog;
+using System;
+using System.Web;
+using System.Web.Http;
+using System.Web.Security;
+using MasterTrainer.Business.Services;
+using MasterTrainer.DataContracts.Server;
 
+namespace MasterTrainer.API.Controllers.V1
+{
     [RoutePrefix("api/v1/authentication")]
     public class AuthenticationController : ApiController
     {

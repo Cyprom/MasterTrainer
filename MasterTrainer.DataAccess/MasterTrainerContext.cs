@@ -1,11 +1,9 @@
+using System.Data.Entity;
+using MasterTrainer.Data.Entities;
+using MasterTrainer.DataAccess.Configurations;
+
 namespace MasterTrainer.DataAccess
 {
-    using System.Data.Entity;
-    using MasterTrainer.Data.PawnManagement;
-    using MasterTrainer.Data.UserManagement;
-    using MasterTrainer.DataAccess.Configurations.PawnManagement;
-    using MasterTrainer.DataAccess.Configurations.UserManagement;
-
     public class MasterTrainerContext : DbContext
     {
         public MasterTrainerContext() : base("name=MasterTrainer")

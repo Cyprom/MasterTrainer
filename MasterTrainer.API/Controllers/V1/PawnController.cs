@@ -1,10 +1,10 @@
-﻿namespace MasterTrainer.API.Controllers.V1
-{
-    using NLog;
-    using System;
-    using System.Web.Http;
-    using MasterTrainer.Business.PawnManagement.Services;
+﻿using NLog;
+using System;
+using System.Web.Http;
+using MasterTrainer.Business.Services;
 
+namespace MasterTrainer.API.Controllers.V1
+{
     [Authorize, RoutePrefix("api/v1/pawn")]
     public class PawnController : ApiController
     {

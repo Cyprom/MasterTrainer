@@ -1,23 +1,18 @@
+using System;
+using System.Web;
+using MasterTrainer.Business.Mappers;
+using MasterTrainer.Business.Repositories;
+using MasterTrainer.Business.Services;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
+using Ninject.Web.Common.WebHost;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MasterTrainer.API.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(MasterTrainer.API.App_Start.NinjectWebCommon), "Stop")]
 
 namespace MasterTrainer.API.App_Start
 {
-    using System;
-    using System.Web;
-    using MasterTrainer.Business.AuthenticationManagement.Services;
-    using MasterTrainer.Business.PawnManagement.Mappers;
-    using MasterTrainer.Business.PawnManagement.Repositories;
-    using MasterTrainer.Business.PawnManagement.Services;
-    using MasterTrainer.Business.RegistrationManagement.Services;
-    using MasterTrainer.Business.UserManagement.Mappers;
-    using MasterTrainer.Business.UserManagement.Repositories;
-    using MasterTrainer.Business.UserManagement.Services;
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-    using Ninject;
-    using Ninject.Web.Common;
-    using Ninject.Web.Common.WebHost;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();

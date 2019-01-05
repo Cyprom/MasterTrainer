@@ -2,9 +2,9 @@
 
 namespace MasterTrainer.Configuration
 {
-    public static class Configuration
+    internal static class Configuration
     {
-        public static string GetAppSetting(string prefix, string setting, string fallback = null)
+        internal static string GetAppSetting(string prefix, string setting, string fallback = null)
         {
             try
             {

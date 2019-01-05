@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegistrationManagement\Registration.cs" />
-    <Compile Include="AuthenticationManagement\Credentials.cs" />
-    <Compile Include="PawnManagement\Pawn.cs" />
+    <Compile Include="Server\Registration.cs" />
+    <Compile Include="Server\Credentials.cs" />
+    <Compile Include="Client\Pawn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserManagement\User.cs" />
+    <Compile Include="Client\User.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

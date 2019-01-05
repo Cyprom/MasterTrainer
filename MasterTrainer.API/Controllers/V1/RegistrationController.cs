@@ -1,11 +1,11 @@
-﻿namespace MasterTrainer.API.Controllers.V1
-{
-    using NLog;
-    using System;
-    using System.Web.Http;
-    using MasterTrainer.DataContracts.RegistrationManagement;
-    using MasterTrainer.Business.RegistrationManagement.Services;
+﻿using NLog;
+using System;
+using System.Web.Http;
+using MasterTrainer.Business.Services;
+using MasterTrainer.DataContracts.Server;
 
+namespace MasterTrainer.API.Controllers.V1
+{
     [RoutePrefix("api/v1/registration")]
     public class RegistrationController : ApiController
     {
