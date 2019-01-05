@@ -10,11 +10,12 @@
     public class RegistrationController : ApiController
     {
         private ILogger logger = LogManager.GetLogger("APILogger");
+
         private readonly IRegistrationService registrationService;
 
-        public RegistrationController()
+        public RegistrationController(IRegistrationService registrationService)
         {
-            registrationService = new RegistrationService();
+            this.registrationService = registrationService;
         }
 
         [HttpPost, Route("register")]

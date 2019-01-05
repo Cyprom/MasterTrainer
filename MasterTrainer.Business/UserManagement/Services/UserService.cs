@@ -9,13 +9,13 @@
 
     public class UserService : IUserService
     {
-        private readonly IUserRepository userRepository;
         private readonly IUserMapper userMapper;
+        private readonly IUserRepository userRepository;
 
-        public UserService()
+        public UserService(IUserMapper userMapper, IUserRepository userRepository)
         {
-            userRepository = new UserRepository();
-            userMapper = new UserMapper();
+            this.userMapper = userMapper;
+            this.userRepository = userRepository;
         }
 
         public ICollection<User> GetAll()

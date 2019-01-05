@@ -11,10 +11,10 @@ namespace MasterTrainer.Business.RegistrationManagement.Services
         private readonly IPasswordService passwordService;
         private readonly IUserService userService;
 
-        public RegistrationService()
+        public RegistrationService(IPasswordService passwordService, IUserService userService)
         {
-            passwordService = new PasswordService();
-            userService = new UserService();
+            this.passwordService = passwordService;
+            this.userService = userService;
         }
 
         public User Register(string name, string password, string confirmation)

@@ -9,13 +9,13 @@
 
     public class PawnService : IPawnService
     {
-        private readonly IPawnRepository pawnRepository;
         private readonly IPawnMapper pawnMapper;
+        private readonly IPawnRepository pawnRepository;
 
-        public PawnService()
+        public PawnService(IPawnMapper pawnMapper, IPawnRepository pawnRepository)
         {
-            pawnRepository = new PawnRepository();
-            pawnMapper = new PawnMapper();
+            this.pawnMapper = pawnMapper;
+            this.pawnRepository = pawnRepository;
         }
 
         public ICollection<Pawn> GetAll()

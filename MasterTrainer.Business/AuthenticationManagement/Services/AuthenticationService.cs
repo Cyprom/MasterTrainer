@@ -7,14 +7,14 @@
     public class AuthenticationService : IAuthenticationService
     {
         private readonly IPasswordService passwordService;
-        private readonly IUserRepository userRepository;
         private readonly IUserMapper userMapper;
+        private readonly IUserRepository userRepository;
 
-        public AuthenticationService()
+        public AuthenticationService(IPasswordService passwordService, IUserMapper userMapper, IUserRepository userRepository)
         {
-            passwordService = new PasswordService();
-            userRepository = new UserRepository();
-            userMapper = new UserMapper();
+            this.passwordService = passwordService;
+            this.userMapper = userMapper;
+            this.userRepository = userRepository;
         }
 
         public User Authenticate(string name, string password)

@@ -9,11 +9,12 @@
     public class PawnController : ApiController
     {
         private ILogger logger = LogManager.GetLogger("APILogger");
+
         private readonly IPawnService pawnService;
 
-        public PawnController()
+        public PawnController(IPawnService pawnService)
         {
-            pawnService = new PawnService();
+            this.pawnService = pawnService;
         }
 
         [HttpGet, Route("pawns")]

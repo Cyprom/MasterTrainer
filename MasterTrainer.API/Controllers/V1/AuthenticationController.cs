@@ -13,13 +13,14 @@
     public class AuthenticationController : ApiController
     {
         private ILogger logger = LogManager.GetLogger("APILogger");
+
         private readonly IAuthenticationService authenticationService;
         private readonly IUserService userService;
 
-        public AuthenticationController()
+        public AuthenticationController(IAuthenticationService authenticationService, IUserService userService)
         {
-            authenticationService = new AuthenticationService();
-            userService = new UserService();
+            this.authenticationService = authenticationService;
+            this.userService = userService;
         }
 
         [HttpPost, Route("log-in")]
