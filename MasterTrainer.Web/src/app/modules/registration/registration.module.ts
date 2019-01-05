@@ -5,11 +5,14 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components
+import { RegistrationComponent } from './components/registration/registration.component';
 
 // Services
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        RegistrationComponent
+    ],
     imports: [
         CommonModule,
         FormsModule,

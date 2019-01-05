@@ -5,18 +5,23 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 // Services
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        NavigationComponent
+    ],
     imports: [
         CommonModule,
         FormsModule,
         RouterModule,
         HttpClientModule
     ],
-    exports: [],
+    exports: [
+        NavigationComponent
+    ],
     providers: []
 })
 

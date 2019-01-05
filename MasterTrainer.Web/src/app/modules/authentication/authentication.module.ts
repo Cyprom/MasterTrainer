@@ -5,11 +5,16 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // Components
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 // Services
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        LoginComponent,
+        LogoutComponent
+    ],
     imports: [
         CommonModule,
         FormsModule,

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationModule } from '../navigation/navigation.module';
 
 // Components
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +18,8 @@ import { HomeComponent } from './components/home/home.component';
         CommonModule,
         FormsModule,
         RouterModule,
-        HttpClientModule
+        HttpClientModule,
+        NavigationModule
     ],
     exports: [],
     providers: []
