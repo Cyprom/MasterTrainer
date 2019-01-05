@@ -17,7 +17,7 @@ namespace MasterTrainer.Business.RegistrationManagement.Services
             userService = new UserService();
         }
 
-        public User Register(string name, string email, string password, string confirmation)
+        public User Register(string name, string password, string confirmation)
         {
             if (password.Length < RegistrationConfiguration.MinimumPasswordLength)
             {
@@ -35,14 +35,8 @@ namespace MasterTrainer.Business.RegistrationManagement.Services
                 throw new RegistrationException($"There is already a user with the name '{name}'!");
             }
 
-            var userByEmail = userService.GetByEmail(email);
-            if (userByEmail != null)
-            {
-                throw new RegistrationException($"The email address '{email}' is already in use!");
-            }
-
             var hashedPassword = passwordService.CreateHash(password);
-            var user = userService.Create(name, email, hashedPassword);
+            var user = userService.Create(name, hashedPassword);
 
             return user;
         }

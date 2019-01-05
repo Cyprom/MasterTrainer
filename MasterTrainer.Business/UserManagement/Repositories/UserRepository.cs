@@ -33,15 +33,7 @@
                 return context.Users.SingleOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             }
         }
-
-        public User SelectByEmail(string email)
-        {
-            using (var context = new MasterTrainerContext())
-            {
-                return context.Users.SingleOrDefault(x => x.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
-            }
-        }
-
+        
         public User Create(User user)
         {
             using (var context = new MasterTrainerContext())

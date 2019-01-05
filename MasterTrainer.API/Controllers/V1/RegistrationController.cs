@@ -22,7 +22,7 @@
         {
             try
             {
-                var user = registrationService.Register(registration.Name, registration.Email, registration.Password, registration.Confirmation);
+                var user = registrationService.Register(registration.Name, registration.Password, registration.Confirmation);
                 if (user != null)
                 {
                     return Ok(user);

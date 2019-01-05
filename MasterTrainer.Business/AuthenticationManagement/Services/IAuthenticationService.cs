@@ -4,6 +4,6 @@
 
     public interface IAuthenticationService
     {
-        User Authenticate(string email, string password);
+        User Authenticate(string name, string password);
     }
 }

@@ -13,7 +13,6 @@
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(x => x.Name).IsRequired().HasColumnType(ColumnType.String).HasMaxLength(50).IsUnique("UserName");
-            Property(x => x.Email).IsRequired().HasColumnType(ColumnType.String).HasMaxLength(200).IsUnique("UserEmail");
             Property(x => x.Password).IsRequired().HasColumnType(ColumnType.String).IsMaxLength();
 
             Property(x => x.RegisteredOn).IsRequired().HasColumnType(ColumnType.DateTime);

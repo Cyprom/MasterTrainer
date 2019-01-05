@@ -11,8 +11,6 @@
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
-        [DataMember(Name = "email")]
-        public string Email { get; set; }
 
         [DataMember(Name = "registeredOn")]
         public DateTime RegisteredOn { get; set; }

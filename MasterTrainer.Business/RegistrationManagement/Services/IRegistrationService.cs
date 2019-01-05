@@ -4,6 +4,6 @@ namespace MasterTrainer.Business.RegistrationManagement.Services
 {
     public interface IRegistrationService
     {
-        User Register(string name, string email, string password, string confirmation);
+        User Register(string name, string password, string confirmation);
     }    
 }

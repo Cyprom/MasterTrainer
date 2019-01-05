@@ -32,18 +32,11 @@
             return user != null ? userMapper.Map(user) : null;
         }
 
-        public User GetByEmail(string email)
-        {
-            var user = userRepository.SelectByEmail(email);
-            return user != null ? userMapper.Map(user) : null;
-        }
-
-        public User Create(string name, string email, string hashedPassword)
+        public User Create(string name, string hashedPassword)
         {
             var entity = new Data.UserManagement.User()
             {
                 Name = name,
-                Email = email,
                 Password = hashedPassword,
                 RegisteredOn = DateTime.Now
             };

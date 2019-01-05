@@ -17,9 +17,9 @@
             userMapper = new UserMapper();
         }
 
-        public User Authenticate(string email, string password)
+        public User Authenticate(string name, string password)
         {
-            var user = userRepository.SelectByEmail(email);
+            var user = userRepository.SelectByName(name);
             if (user != null && passwordService.VerifyPassword(password, user.Password))
             {
                 return userMapper.Map(user);

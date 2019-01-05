@@ -27,10 +27,10 @@
         {
             try
             {
-                var user = authenticationService.Authenticate(credentials.Email, credentials.Password);
+                var user = authenticationService.Authenticate(credentials.Name, credentials.Password);
                 if (user != null)
                 {
-                    FormsAuthentication.SetAuthCookie(credentials.Email.ToLowerInvariant(), false);
+                    FormsAuthentication.SetAuthCookie(credentials.Name.ToLowerInvariant(), false);
                     return Ok(user);
                 }
                 return BadRequest();
@@ -67,7 +67,7 @@
             {
                 if (HttpContext.Current.Request.IsAuthenticated)
                 {
-                    var user = userService.GetByEmail(HttpContext.Current.User?.Identity?.Name);
+                    var user = userService.GetByName(HttpContext.Current.User?.Identity?.Name);
                     return Ok(user);
                 }
                 return Unauthorized();

@@ -9,7 +9,6 @@
                 Id = entity.Id,
 
                 Name = entity.Name,
-                Email = entity.Email,
 
                 RegisteredOn = entity.RegisteredOn
             };
