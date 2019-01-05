@@ -14,8 +14,8 @@
 
         public PawnService()
         {
-            this.pawnRepository = new PawnRepository();
-            this.pawnMapper = new PawnMapper();
+            pawnRepository = new PawnRepository();
+            pawnMapper = new PawnMapper();
         }
 
         public ICollection<Pawn> GetAll()

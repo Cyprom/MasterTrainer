@@ -9,6 +9,7 @@
         User Select(int id);
         User SelectByName(string name);
         User SelectByEmail(string email);
+        User Create(User user);
         User Update(User user, ICollection<string> propertiesToUpdate = null);
     }
 }

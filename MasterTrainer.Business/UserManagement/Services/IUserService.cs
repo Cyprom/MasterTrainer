@@ -6,6 +6,8 @@
     public interface IUserService
     {
         ICollection<User> GetAll();
+        User GetByName(string name);
         User GetByEmail(string email);
+        User Create(string name, string email, string hashedPassword);
     }
 }

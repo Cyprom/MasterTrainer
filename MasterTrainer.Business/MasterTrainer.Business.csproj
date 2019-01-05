@@ -95,6 +95,11 @@
       <DependentUpon>PawnService.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationManagement\Exceptions\RegistrationException.cs" />
+    <Compile Include="RegistrationManagement\Services\RegistrationService.cs" />
+    <Compile Include="RegistrationManagement\Services\IRegistrationService.cs">
+      <DependentUpon>RegistrationService.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagement\Mappers\UserMapper.cs" />
     <Compile Include="UserManagement\Mappers\IUserMapper.cs">
       <DependentUpon>UserMapper.cs</DependentUpon>
@@ -114,11 +119,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Shared\Exceptions\" />
-    <Folder Include="Shared\Extensions\" />
-    <Folder Include="Shared\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MasterTrainer.Configuration\MasterTrainer.Configuration.csproj">
       <Project>{b035f4ae-3caa-4b4b-a853-3c413563639e}</Project>

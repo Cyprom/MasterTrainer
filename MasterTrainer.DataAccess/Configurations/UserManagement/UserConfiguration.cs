@@ -3,7 +3,7 @@
     using MasterTrainer.Data.UserManagement;
     using System.Data.Entity.ModelConfiguration;
     using System.ComponentModel.DataAnnotations.Schema;
-    using MasterTrainer.Constants;
+    using MasterTrainer.DataAccess.Extensions;
 
     public class UserConfiguration : EntityTypeConfiguration<User>
     {
@@ -12,9 +12,11 @@
             HasKey(x => x.Id);
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            Property(x => x.Name).IsRequired().HasColumnType(Database.ColumnType.String).HasMaxLength(50);
-            Property(x => x.Email).IsRequired().HasColumnType(Database.ColumnType.String).HasMaxLength(200);
-            Property(x => x.Password).IsRequired().HasColumnType(Database.ColumnType.String).IsMaxLength();
+            Property(x => x.Name).IsRequired().HasColumnType(ColumnType.String).HasMaxLength(50).IsUnique("UserName");
+            Property(x => x.Email).IsRequired().HasColumnType(ColumnType.String).HasMaxLength(200).IsUnique("UserEmail");
+            Property(x => x.Password).IsRequired().HasColumnType(ColumnType.String).IsMaxLength();
+
+            Property(x => x.RegisteredOn).IsRequired().HasColumnType(ColumnType.DateTime);
         }
     }
 }

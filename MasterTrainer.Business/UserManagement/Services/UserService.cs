@@ -1,5 +1,6 @@
 ﻿namespace MasterTrainer.Business.UserManagement.Services
 {
+    using System;
     using System.Linq;
     using System.Collections.Generic;
     using MasterTrainer.DataContracts.UserManagement;
@@ -13,8 +14,8 @@
 
         public UserService()
         {
-            this.userRepository = new UserRepository();
-            this.userMapper = new UserMapper();
+            userRepository = new UserRepository();
+            userMapper = new UserMapper();
         }
 
         public ICollection<User> GetAll()
@@ -25,9 +26,29 @@
             return sorted;
         }
 
+        public User GetByName(string name)
+        {
+            var user = userRepository.SelectByName(name);
+            return user != null ? userMapper.Map(user) : null;
+        }
+
         public User GetByEmail(string email)
         {
             var user = userRepository.SelectByEmail(email);
+            return user != null ? userMapper.Map(user) : null;
+        }
+
+        public User Create(string name, string email, string hashedPassword)
+        {
+            var entity = new Data.UserManagement.User()
+            {
+                Name = name,
+                Email = email,
+                Password = hashedPassword,
+                RegisteredOn = DateTime.Now
+            };
+
+            var user = userRepository.Create(entity);
             return user != null ? userMapper.Map(user) : null;
         }
     }

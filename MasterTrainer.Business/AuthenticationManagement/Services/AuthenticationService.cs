@@ -12,9 +12,9 @@
 
         public AuthenticationService()
         {
-            this.passwordService = new PasswordService();
-            this.userRepository = new UserRepository();
-            this.userMapper = new UserMapper();
+            passwordService = new PasswordService();
+            userRepository = new UserRepository();
+            userMapper = new UserMapper();
         }
 
         public User Authenticate(string email, string password)
@@ -26,6 +26,5 @@
             }
             return null;
         }
-
     }
 }

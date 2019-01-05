@@ -13,7 +13,7 @@
 
         public PawnController()
         {
-            this.pawnService = new PawnService();
+            pawnService = new PawnService();
         }
 
         [HttpGet, Route("pawns")]

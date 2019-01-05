@@ -8,7 +8,10 @@
             {
                 Id = entity.Id,
 
-                Name = entity.Name
+                Name = entity.Name,
+                Email = entity.Email,
+
+                RegisteredOn = entity.RegisteredOn
             };
         }
     }

@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Configurations\PawnManagement\PawnConfiguration.cs" />
     <Compile Include="Configurations\UserManagement\UserConfiguration.cs" />
+    <Compile Include="ColumnType.cs" />
+    <Compile Include="Extensions\PropertyConfigurationExtensions.cs" />
     <Compile Include="Migrations\201901051340357_Initial.cs" />
     <Compile Include="Migrations\201901051340357_Initial.Designer.cs">
       <DependentUpon>201901051340357_Initial.cs</DependentUpon>
@@ -58,6 +60,10 @@
     <Compile Include="Migrations\201901051407348_MaxLengths.cs" />
     <Compile Include="Migrations\201901051407348_MaxLengths.Designer.cs">
       <DependentUpon>201901051407348_MaxLengths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901051456120_UniqueUserFields.cs" />
+    <Compile Include="Migrations\201901051456120_UniqueUserFields.Designer.cs">
+      <DependentUpon>201901051456120_UniqueUserFields.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +90,10 @@
     <EmbeddedResource Include="Migrations\201901051407348_MaxLengths.resx">
       <DependentUpon>201901051407348_MaxLengths.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901051456120_UniqueUserFields.resx">
+      <DependentUpon>201901051456120_UniqueUserFields.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

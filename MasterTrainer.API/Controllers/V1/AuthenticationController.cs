@@ -18,8 +18,8 @@
 
         public AuthenticationController()
         {
-            this.authenticationService = new AuthenticationService();
-            this.userService = new UserService();
+            authenticationService = new AuthenticationService();
+            userService = new UserService();
         }
 
         [HttpPost, Route("log-in")]

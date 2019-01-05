@@ -3,8 +3,6 @@
     using System.Web.Http;
 
     // TODO: Use injection or singletons
-    // TODO: Test initial setup
-    // TODO: Happy coding!
 
     public class ApiConfiguration
     {

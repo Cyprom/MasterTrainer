@@ -1,5 +1,6 @@
 ﻿namespace MasterTrainer.DataContracts.UserManagement
 {
+    using System;
     using System.Runtime.Serialization;
 
     [DataContract]
@@ -10,5 +11,10 @@
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
+        [DataMember(Name = "email")]
+        public string Email { get; set; }
+
+        [DataMember(Name = "registeredOn")]
+        public DateTime RegisteredOn { get; set; }
     }
 }

@@ -42,6 +42,16 @@
             }
         }
 
+        public User Create(User user)
+        {
+            using (var context = new MasterTrainerContext())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+                return user;
+            }
+        }
+
         public User Update(User user, ICollection<string> propertiesToUpdate = null)
         {
             using (var context = new MasterTrainerContext())
