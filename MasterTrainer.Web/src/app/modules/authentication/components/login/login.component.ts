@@ -1,4 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationApiService } from '../../services/authentication-api.service';
 
 @Component({
     selector: 'app-login',
@@ -6,7 +8,32 @@
 })
 export class LoginComponent implements OnInit {
 
-    constructor() { }
+    public isBusy: boolean;
+
+    constructor(
+        private router: Router,
+        private authenticationApi: AuthenticationApiService
+    ) {
+        //const authenicationSubscription = this.authenticationApi.isAuthenticated().subscribe(user => {
+        //    if (user) {
+        //        this.router.navigate(['dashboard']);
+        //        authenicationSubscription.unsubscribe();
+        //    }
+        //})
+    }
 
     public ngOnInit = () => { }
+
+    public login = (name: string, password: string) => {
+        if (!this.isBusy) {
+            this.isBusy = true;
+
+            this.authenticationApi.logIn(name, password).subscribe(user => {
+                this.router.navigate(['home']);
+                this.isBusy = false;
+            }, error => {
+                this.isBusy = false;
+            });
+        }
+    }
 }

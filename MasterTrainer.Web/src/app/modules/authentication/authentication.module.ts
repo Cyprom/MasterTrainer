@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 
 // Services
+import { AuthenticationApiService } from './services/authentication-api.service';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,9 @@ import { LogoutComponent } from './components/logout/logout.component';
         HttpClientModule
     ],
     exports: [],
-    providers: []
+    providers: [
+        AuthenticationApiService
+    ]
 })
 
 export class AuthenticationModule { }

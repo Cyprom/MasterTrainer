@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './components/registration/registration.component';
 
 // Services
+import { RegistrationApiService } from './services/registration-api.service';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,9 @@ import { RegistrationComponent } from './components/registration/registration.co
         HttpClientModule
     ],
     exports: [],
-    providers: []
+    providers: [
+        RegistrationApiService
+    ]
 })
 
 export class RegistrationModule { }
