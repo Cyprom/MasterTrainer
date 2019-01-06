@@ -2,7 +2,8 @@
 
 @Component({
     selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html'
+    templateUrl: './dashboard.component.html',
+    styles: [':host { width: 100%; }']
 })
 export class DashboardComponent implements OnInit {
 

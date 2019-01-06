@@ -4,7 +4,8 @@ import { AuthenticationApiService } from '../../services/authentication-api.serv
 
 @Component({
     selector: 'app-login',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styles: [':host { width: 100%; }']
 })
 export class LoginComponent implements OnInit {
 

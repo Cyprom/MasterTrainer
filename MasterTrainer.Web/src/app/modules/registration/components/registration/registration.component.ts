@@ -4,7 +4,8 @@ import { RegistrationApiService } from '../../services/registration-api.service'
 
 @Component({
     selector: 'app-registration',
-    templateUrl: './registration.component.html'
+    templateUrl: './registration.component.html',
+    styles: [':host { width: 100%; }']
 })
 export class RegistrationComponent implements OnInit {
 

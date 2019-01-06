@@ -1,0 +1,23 @@
+﻿.navigation {
+    text-align: center;
+    background-color: $peach;
+    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
+    padding: 5px;
+
+    .navigation-link {
+        display: inline;
+        margin: 5px;
+        padding: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &__active {
+            background-color: red;
+        }
+
+        &:hover {
+            background-color: blue;
+        }
+    }
+}
