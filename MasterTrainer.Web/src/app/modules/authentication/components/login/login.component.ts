@@ -15,11 +15,11 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private authenticationApi: AuthenticationApiService
     ) {
-        const authenicationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
+        const authenticationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
             if (user) {
                 this.router.navigate(['dashboard']);
             }
-            authenicationSubscription.unsubscribe();
+            authenticationSubscription.unsubscribe();
         });
     }
 

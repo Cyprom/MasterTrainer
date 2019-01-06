@@ -16,11 +16,11 @@ export class LogoutComponent implements OnInit {
         private authenticationApi: AuthenticationApiService
     ) {
         this.isHidden = true;
-        const authenicationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
+        const authenticationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
             if (user) {
                 this.isHidden = false;
             }
-            authenicationSubscription.unsubscribe();
+            authenticationSubscription.unsubscribe();
         });
     }
 

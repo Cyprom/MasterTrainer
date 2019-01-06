@@ -9,9 +9,10 @@ namespace MasterTrainer.API
     /**
      * Development tasks
      * -----------------
+     * TODO: Fix hidden attribute effect on navigation links
+     * TODO: Prepare dashboard
      * TODO: Write instructions manual (static pages in frontend instructions component)
      * TODO: Complete design and styling of unauthorized pages
-     * TODO: Prepare dashboard
      */
 
     public class Global : HttpApplication
