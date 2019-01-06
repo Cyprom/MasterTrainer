@@ -11,6 +11,9 @@ import { LogoutComponent } from './components/logout/logout.component';
 // Services
 import { AuthenticationApiService } from './services/authentication-api.service';
 
+// Guard
+import { AuthenticationGuard } from './guards/authentication.guard';
+
 @NgModule({
     declarations: [
         LoginComponent,
@@ -22,9 +25,12 @@ import { AuthenticationApiService } from './services/authentication-api.service'
         RouterModule,
         HttpClientModule
     ],
-    exports: [],
+    exports: [
+        LogoutComponent
+    ],
     providers: [
-        AuthenticationApiService
+        AuthenticationApiService,
+        AuthenticationGuard
     ]
 })
 

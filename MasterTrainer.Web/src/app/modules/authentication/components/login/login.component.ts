@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private authenticationApi: AuthenticationApiService
     ) {
-        //const authenicationSubscription = this.authenticationApi.isAuthenticated().subscribe(user => {
-        //    if (user) {
-        //        this.router.navigate(['dashboard']);
-        //        authenicationSubscription.unsubscribe();
-        //    }
-        //})
+        const authenicationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
+            if (user) {
+                this.router.navigate(['dashboard']);
+                authenicationSubscription.unsubscribe();
+            }
+        })
     }
 
     public ngOnInit = () => { }
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             this.isBusy = true;
 
             this.authenticationApi.logIn(name, password).subscribe(user => {
-                this.router.navigate(['home']);
+                this.router.navigate(['dashboard']);
                 this.isBusy = false;
             }, error => {
                 this.isBusy = false;

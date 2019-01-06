@@ -1,3 +1,8 @@
 ﻿import { Routes } from '@angular/router';
 
-export const gameRoutes: Routes = [];
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthenticationGuard } from '../authentication/guards/authentication.guard';
+
+export const gameRoutes: Routes = [
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticationGuard]}
+];
