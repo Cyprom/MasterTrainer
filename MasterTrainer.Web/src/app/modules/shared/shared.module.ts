@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { NavigationModule } from '../navigation/navigation.module';
 
 // Components
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+// Services
+import { AuthenticationApiService } from './services/authentication-api.service';
+
+// Guards
+import { AuthenticationGuard } from '../shared/guards/authentication.guard';
 
 @NgModule({
     declarations: [
@@ -18,14 +23,16 @@ import { FooterComponent } from './components/footer/footer.component';
         CommonModule,
         FormsModule,
         RouterModule,
-        HttpClientModule,
-        NavigationModule
+        HttpClientModule
     ],
     exports: [
         HeaderComponent,
         FooterComponent
     ],
-    providers: []
+    providers: [
+        AuthenticationApiService,
+        AuthenticationGuard
+    ]
 })
 
 export class SharedModule { }

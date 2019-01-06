@@ -10,12 +10,6 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 
-// Services
-import { AuthenticationApiService } from './services/authentication-api.service';
-
-// Guard
-import { AuthenticationGuard } from './guards/authentication.guard';
-
 @NgModule({
     declarations: [
         LoginComponent,
@@ -32,10 +26,7 @@ import { AuthenticationGuard } from './guards/authentication.guard';
     exports: [
         LogoutComponent
     ],
-    providers: [
-        AuthenticationApiService,
-        AuthenticationGuard
-    ]
+    providers: []
 })
 
 export class AuthenticationModule { }

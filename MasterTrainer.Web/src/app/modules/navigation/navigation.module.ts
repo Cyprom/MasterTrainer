@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 // Components
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -15,7 +16,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
         CommonModule,
         FormsModule,
         RouterModule,
-        HttpClientModule
+        HttpClientModule,
+        SharedModule
     ],
     exports: [
         NavigationComponent
