@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationModule } from '../authentication/authentication.module';
+import { NavigationModule } from '../navigation/navigation.module';
+import { SharedModule } from '../shared/shared.module';
 
 // Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -19,7 +21,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
         FormsModule,
         RouterModule,
         HttpClientModule,
-        AuthenticationModule
+        AuthenticationModule,
+        NavigationModule,
+        SharedModule
     ],
     exports: [],
     providers: []

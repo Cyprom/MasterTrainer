@@ -9,11 +9,20 @@ import { AuthenticationApiService } from '../../services/authentication-api.serv
 export class LogoutComponent implements OnInit {
 
     public isBusy: boolean;
+    public isHidden: boolean;
 
     constructor(
         private router: Router,
         private authenticationApi: AuthenticationApiService
-    ) { }
+    ) {
+        this.isHidden = true;
+        const authenicationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
+            if (user) {
+                this.isHidden = false;
+            }
+            authenicationSubscription.unsubscribe();
+        });
+    }
 
     public ngOnInit = () => { }
 

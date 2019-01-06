@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
         const authenicationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
             if (user) {
                 this.router.navigate(['dashboard']);
-                authenicationSubscription.unsubscribe();
             }
-        })
+            authenicationSubscription.unsubscribe();
+        });
     }
 
     public ngOnInit = () => { }

@@ -5,6 +5,15 @@ using MasterTrainer.API.App_Start;
 
 namespace MasterTrainer.API
 {
+
+    /**
+     * Development tasks
+     * -----------------
+     * TODO: Write instructions manual (static pages in frontend instructions component)
+     * TODO: Complete design and styling of unauthorized pages
+     * TODO: Prepare dashboard
+     */
+
     public class Global : HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)

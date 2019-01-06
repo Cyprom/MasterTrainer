@@ -9,13 +9,11 @@ import { SharedModule } from '../shared/shared.module';
 // Components
 import { HomeComponent } from './components/home/home.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
-import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
     declarations: [
         HomeComponent,
-        InstructionsComponent,
-        AboutComponent
+        InstructionsComponent
     ],
     imports: [
         CommonModule,

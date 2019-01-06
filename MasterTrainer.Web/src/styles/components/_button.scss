@@ -4,6 +4,7 @@
     border-radius: 5px;
     background-color: purple;
     cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: lighten(purple, 5%);

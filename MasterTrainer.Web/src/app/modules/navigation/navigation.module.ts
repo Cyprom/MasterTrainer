@@ -7,8 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 // Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 
-// Services
-
 @NgModule({
     declarations: [
         NavigationComponent
