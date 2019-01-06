@@ -4,30 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationModule } from '../navigation/navigation.module';
-import { SharedModule } from '../shared/shared.module';
 
 // Components
-import { RegistrationComponent } from './components/registration/registration.component';
-
-// Services
-import { RegistrationApiService } from './services/registration-api.service';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     declarations: [
-        RegistrationComponent
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         RouterModule,
         HttpClientModule,
-        NavigationModule,
-        SharedModule
+        NavigationModule
     ],
-    exports: [],
-    providers: [
-        RegistrationApiService
-    ]
+    exports: [
+        HeaderComponent,
+        FooterComponent
+    ],
+    providers: []
 })
 
-export class RegistrationModule { }
+export class SharedModule { }

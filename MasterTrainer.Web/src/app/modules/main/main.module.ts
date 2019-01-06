@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationModule } from '../navigation/navigation.module';
+import { SharedModule } from '../shared/shared.module';
 
 // Components
 import { HomeComponent } from './components/home/home.component';
-
-// Services
 
 @NgModule({
     declarations: [
@@ -19,7 +18,8 @@ import { HomeComponent } from './components/home/home.component';
         FormsModule,
         RouterModule,
         HttpClientModule,
-        NavigationModule
+        NavigationModule,
+        SharedModule
     ],
     exports: [],
     providers: []

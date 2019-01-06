@@ -1,4 +1,6 @@
-﻿<div class="registration">
+﻿<app-header></app-header>
+<app-navigation></app-navigation>
+<div class="registration">
     <div class="form-group">
         <label for="name">Name</label>
         <input id="name" type="text" class="form-control" #name />
@@ -15,3 +17,4 @@
         <button type="button" class="btn btn-primary" (click)="register(name.value, password.value, confirmation.value)" [disabled]="isBusy">Register</button>
     </div>
 </div>
+<app-footer></app-footer>

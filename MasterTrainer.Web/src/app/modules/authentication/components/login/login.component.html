@@ -1,4 +1,6 @@
-﻿<div class="login">
+﻿<app-header></app-header>
+<app-navigation></app-navigation>
+<div class="login">
     <div class="form-group">
         <label for="name">Name</label>
         <input id="name" type="text" class="form-control" #name />
@@ -11,3 +13,4 @@
         <button type="button" class="btn btn-primary" (click)="login(name.value, password.value)" [disabled]="isBusy">Log in</button>
     </div>
 </div>
+<app-footer></app-footer>

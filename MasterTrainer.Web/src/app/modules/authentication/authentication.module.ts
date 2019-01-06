@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationModule } from '../navigation/navigation.module';
+import { SharedModule } from '../shared/shared.module';
 
 // Components
 import { LoginComponent } from './components/login/login.component';
@@ -23,7 +25,9 @@ import { AuthenticationGuard } from './guards/authentication.guard';
         CommonModule,
         FormsModule,
         RouterModule,
-        HttpClientModule
+        HttpClientModule,
+        NavigationModule,
+        SharedModule
     ],
     exports: [
         LogoutComponent

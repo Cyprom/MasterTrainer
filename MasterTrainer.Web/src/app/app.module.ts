@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 // Modules
 import { AppRoutingModule } from './app-routing.module';
 import { MainModule } from './modules/main/main.module';
+import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { GameModule } from './modules/game/game.module';
 import { NavigationModule } from './modules/navigation/navigation.module';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
         BrowserModule,
         AppRoutingModule,
         MainModule,
+        SharedModule,
         AuthenticationModule,
         GameModule,
         NavigationModule,
