@@ -9,11 +9,13 @@ import { SharedModule } from '../shared/shared.module';
 // Components
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 @NgModule({
     declarations: [
         LoginComponent,
-        LogoutComponent
+        LogoutComponent,
+        ChangePasswordComponent
     ],
     imports: [
         CommonModule,
@@ -24,7 +26,8 @@ import { LogoutComponent } from './components/logout/logout.component';
         SharedModule
     ],
     exports: [
-        LogoutComponent
+        LogoutComponent,
+        ChangePasswordComponent
     ],
     providers: []
 })

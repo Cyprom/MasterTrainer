@@ -1,23 +1,21 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { User } from '../../../shared/models/user.model';
 import { AuthenticationApiService } from '../../../shared/services/authentication-api.service';
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styles: [':host { width: 100%; }']
+    selector: 'app-change-password',
+    templateUrl: './change-password.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class ChangePasswordComponent implements OnInit {
 
     public isBusy: boolean;
-    public user: User;
+    public isLoggedIn: boolean;
 
     constructor(
         private authenticationApi: AuthenticationApiService
     ) {
         const authenticationSubscription = this.authenticationApi.isLoggedIn().subscribe(user => {
             if (user) {
-                this.user = user;
+                this.isLoggedIn = true;
             }
             authenticationSubscription.unsubscribe();
         });
@@ -25,10 +23,18 @@ export class DashboardComponent implements OnInit {
 
     public ngOnInit = () => { }
 
-    public newGame = () => {
+    public changePassword = () => {
         if (!this.isBusy) {
             this.isBusy = true;
-            console.log('Start a new game');
+
+            //this.authenticationApi.logOut().subscribe(user => {
+            //    this.router.navigate(['home']);
+            //    this.isBusy = false;
+            //}, error => {
+            //    this.isBusy = false;
+            //});
+
+            console.log('Change password through modal with API call');
             this.isBusy = false;
         }
     }

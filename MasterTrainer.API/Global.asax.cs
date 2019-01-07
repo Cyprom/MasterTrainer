@@ -9,7 +9,8 @@ namespace MasterTrainer.API
     /**
      * Development tasks
      * -----------------
-     * TODO: Prepare dashboard
+     * TODO: Change password modal
+     * TODO: Load saved games and statistics in dashboard
      * TODO: Write instructions manual (static pages in frontend instructions component)
      * TODO: Complete design and styling of unauthorized pages
      */

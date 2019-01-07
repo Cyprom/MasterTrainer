@@ -1,7 +1,24 @@
 ﻿<app-header></app-header>
 <app-navigation></app-navigation>
 <div class="dashboard">
-    <p>Dashboard</p>
-    <app-logout></app-logout>
+    <h1>Dashboard</h1>
+
+    <div *ngIf="user" class="account">
+        <h2>Account</h2>
+        <p>Username: {{user.name}}</p>
+        <app-change-password></app-change-password>
+        <app-logout></app-logout>
+    </div>
+
+    <div *ngIf="user" class="games">
+        <h2>Games</h2>
+        <button type="button" class="button" (click)="newGame()" [disabled]="isBusy">New game</button>
+        <p>Saved games are not available yet. Try again later.</p>
+    </div>
+
+    <div *ngIf="user" class="statistics">
+        <h2>Statistics</h2>
+        <p>Statistics are not available yet. Try again later.</p>
+    </div>
 </div>
 <app-footer></app-footer>
